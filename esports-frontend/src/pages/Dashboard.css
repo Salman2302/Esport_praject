@@ -1,0 +1,69 @@
+.dash-page { padding: 48px 0 80px; }
+
+.dash-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.dash-welcome { display: flex; align-items: center; gap: 16px; }
+.dash-avatar {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.dash-title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+}
+.dash-role-tag {
+  font-size: 13px;
+  color: var(--accent-light);
+  font-family: var(--font-ui);
+  margin-top: 2px;
+}
+
+.create-form { margin-bottom: 32px; }
+.create-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.dash-tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 28px;
+}
+
+.overview-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 14px;
+}
+.ov-card { text-align: center; padding: 24px; }
+.ov-icon { font-size: 28px; margin-bottom: 8px; }
+.ov-val  { font-family: var(--font-display); font-size: 26px; font-weight: 800; }
+.ov-label { font-size: 12px; color: var(--text-muted); font-family: var(--font-ui); text-transform: uppercase; letter-spacing: 0.8px; margin-top: 4px; }
+
+.dash-teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+.dash-team-card { display: flex; flex-direction: column; text-decoration: none; color: inherit; }
+.dash-team-header { display: flex; align-items: center; gap: 10px; }
+
+@media (max-width: 600px) {
+  .create-grid { grid-template-columns: 1fr; }
+  .dash-teams-grid { grid-template-columns: 1fr; }
+}

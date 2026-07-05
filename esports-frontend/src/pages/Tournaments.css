@@ -1,0 +1,69 @@
+.tournaments-page { padding: 48px 0 80px; }
+
+.page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+.page-title {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+.page-sub { font-size: 15px; color: var(--text-secondary); }
+
+.filters-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+}
+.search-input { flex: 1; min-width: 200px; }
+.status-select { width: auto; min-width: 160px; }
+
+.filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex: 1;
+}
+.filter-chip {
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: transparent;
+  transition: all 0.15s;
+  font-family: var(--font-ui);
+}
+.filter-chip:hover  { border-color: var(--accent); color: var(--accent-light); }
+.filter-chip.active { border-color: var(--accent); background: rgba(124,92,252,0.15); color: var(--accent-light); }
+
+.results-count {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-family: var(--font-ui);
+  margin-bottom: 20px;
+}
+
+.t-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .t-grid { grid-template-columns: 1fr; }
+  .page-title { font-size: 28px; }
+}
