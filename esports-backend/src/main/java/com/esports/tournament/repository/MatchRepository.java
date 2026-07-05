@@ -1,0 +1,13 @@
+package com.esports.tournament.repository;
+
+import com.esports.tournament.entity.Match;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface MatchRepository extends JpaRepository<Match, Long> {
+    List<Match> findByTournamentId(Long tournamentId);
+    List<Match> findByStatus(Match.MatchStatus status);
+}
